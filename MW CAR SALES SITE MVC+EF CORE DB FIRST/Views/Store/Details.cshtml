@@ -1,0 +1,16 @@
+﻿@model Ad
+@{ 
+    ViewData["Title"] = Model.Name;
+}
+
+<h3>@Model.Name</h3>
+<div class="col">
+    <div class="post-item d-flex">
+        <img src="@Model.Image"
+             alt="" class="poster">
+        <div class="info">
+            <h4>Price: @Model.Price$</h4>
+            <h5>About: <br />@Model.Description</h5>
+        </div>
+    </div>
+</div>

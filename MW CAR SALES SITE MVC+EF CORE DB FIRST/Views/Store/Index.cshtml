@@ -1,0 +1,56 @@
+﻿@model List<Ad>
+@{
+    ViewData["Title"] = "Home";
+}
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+<div class="row">
+    @foreach (Ad ad in Model)
+    {
+        <div class="col-lg-6 col-md-12 mb-4">
+            <div class="post-item d-flex border border-2 rounded shadow-red">
+                <img src="@ad.Image"
+                     alt="" class="poster">
+                <div class="info">
+                    <h3>@ad.Name</h3>
+                    <h4>@ad.Price$</h4>
+                    <a href="@Url.ActionLink("Details", "Store", ad)" class="btn btn-info w-100">Details</a>
+                </div>
+            </div>
+        </div>
+    }
+    @*<div class="col-lg-4 col-md-6">
+        <div class="post-item d-flex border border-2 rounded">
+            <img src="https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@@._V1_SX300.jpg"
+                 alt="" class="poster">
+            <div class="info">
+                <h3>Hello, My Name Is Doris</h3>
+                <a href="#" class="btn btn-info w-100">Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="post-item d-flex border border-2 rounded">
+            <img src="https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@@._V1_SX300.jpg"
+                 alt="" class="poster">
+            <div class="info">
+                <h3>Hello, My Name Is Doris</h3>
+                <a href="#" class="w-100">Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="post-item d-flex border border-2 rounded">
+            <img src="https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@@._V1_SX300.jpg"
+                 alt="" class="poster">
+            <div class="info">
+                <h3>Hello, My Name Is Doris</h3>
+                <a href="#" class="w-100">Details</a>
+            </div>
+        </div>
+    </div>*@
+</div>
